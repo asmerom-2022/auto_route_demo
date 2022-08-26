@@ -7,6 +7,8 @@ import '../features/views/home/files_page.dart';
 import '../features/views/home/home_page.dart';
 import '../features/views/home/settings_page.dart';
 import '../features/views/home/users_page.dart';
+import '../features/views/home/subscribe.dart';
+import '../features/views/home/dashboard.dart';
 
 @AdaptiveAutoRouter(
   replaceInRouteName: 'Route,Page',
@@ -16,18 +18,15 @@ import '../features/views/home/users_page.dart';
       page: HomePage,
     ),
     AutoRoute(page: AccountPage, children: [
-      AutoRoute(page: DashBoardPage),
-      AutoRoute(
-        page: DownloadPage,
-      ),
-      AutoRoute(page: FilePage),
-      AutoRoute(page: SittingPage),
-      AutoRoute(page: UsersPage),
-      // AutoRoute(path: 'homes', page: HomePage),
-      //RedirectRoute(path: '*', redirectTo: 'HomePage')
-    ]),
-
-// AutoRoute(page:SubscriptionPage)
+      AutoRoute(path: 'dashboard', page: DashBoardPage),
+      AutoRoute(path: 'users', page: UsersPage),
+      AutoRoute(path: 'file', page: FilePage),
+      AutoRoute(path: 'download', page: DownloadPage),
+      AutoRoute(path: 'setting', page: SittingPage),
+      AutoRoute(path: 'subscribe', page: SubscribePage)
+    ])
+    // AutoRoute(path: 'homes', page: HomePage),
+    //RedirectRoute(path: '*', redirectTo: 'HomePage')
   ],
 )
 class $AppRouter {}

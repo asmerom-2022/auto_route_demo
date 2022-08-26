@@ -1,7 +1,8 @@
 // ignore_for_file: prefer_const_constructors
 import 'package:auto_route/auto_route.dart';
-import 'account_page.dart';
+// import 'account_page.dart';
 import 'package:flutter/material.dart';
+import 'package:auto_route_demo/services/routes.gr.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -29,8 +30,8 @@ class _HomePageState extends State<HomePage> {
                   // color: Colors.white,
                 ),
                 onPressed: () {
-                  AutoRouter.of(context).pushNamed('/account-page');
-                  // AutoRouter.of(context).pushNamed(const AccountPage());
+                  // AutoRouter.of(context).pushNamed('/');
+                  context.router.push(AccountPage());
                 },
               )
             ],

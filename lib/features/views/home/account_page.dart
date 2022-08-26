@@ -1,4 +1,5 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:auto_route_demo/services/routes.gr.dart';
 import 'package:easy_sidemenu/easy_sidemenu.dart';
 import 'package:flutter/material.dart';
 import '../../../responsive/responsive.dart';
@@ -84,33 +85,36 @@ class _AccountPageState extends State<AccountPage> {
                   title: 'Dashboard',
                   onTap: () {
                     //page.jumpToPage(0);
-                    AutoRouter.of(context).pushNamed('dash-board-page');
+                    AutoRouter.of(context).pushNamed('dashboard');
+                    print('this is users page');
                   },
                   icon: Icon(Icons.home),
                 ),
                 SideMenuItem(
                   priority: 1,
-                  title: 'Users',
+                  title: 'profile',
                   onTap: () {
-                    AutoRouter.of(context).pushNamed('users-page');
+                    AutoRouter.of(context).pushNamed('users');
                     //  page.jumpToPage(1);
                   },
                   icon: Icon(Icons.supervisor_account),
                 ),
                 SideMenuItem(
                   priority: 2,
-                  title: 'Files',
+                  title: 'change password',
                   onTap: () {
-                    AutoRouter.of(context).pushNamed('file-page');
+                    // context.router.push(FilePage());
+                    AutoRouter.of(context).pushNamed('file');
                     // page.jumpToPage(2);
                   },
                   icon: Icon(Icons.file_copy_rounded),
                 ),
                 SideMenuItem(
                   priority: 3,
-                  title: 'Download',
+                  title: 'Subscription',
                   onTap: () {
-                    AutoRouter.of(context).pushNamed('download-page');
+                    // context.router.push(DownloadPage());
+                    AutoRouter.of(context).pushNamed('download');
                     //page.jumpToPage(3);
                   },
                   icon: Icon(Icons.download),
@@ -119,7 +123,8 @@ class _AccountPageState extends State<AccountPage> {
                   priority: 4,
                   title: 'Settings',
                   onTap: () {
-                    AutoRouter.of(context).pushNamed('sitting-page');
+                    // context.router.push(SittingPage());
+                    AutoRouter.of(context).pushNamed('setting');
                     // page.jumpToPage(4);
                   },
                   icon: Icon(Icons.settings),

@@ -1,4 +1,3 @@
-
 // ignore_for_file: prefer_const_constructors
 
 //import 'package:autor/features/widgets/navdrawer.dart';
@@ -13,11 +12,18 @@ class SittingPage extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         //drawer: NavDrawer(),
-        appBar: AppBar(
-          title: Text('sitting page'),
-        ),
+        // appBar: AppBar(
+        //   title: Text('sitting page'),
+        // ),
+        backgroundColor: Color.fromARGB(255, 29, 29, 29),
         body: Center(
-          child: Text('setting body'),
+          child: Text(
+            'setting body',
+            style: TextStyle(
+              fontSize: 32,
+              decorationColor: Colors.blue,
+            ),
+          ),
         ),
       ),
     );

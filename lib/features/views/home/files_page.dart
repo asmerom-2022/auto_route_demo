@@ -15,9 +15,10 @@ class FilePage extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         //drawer: NavDrawer(),
-        appBar: AppBar(
-          title: Text('file page'),
-        ),
+        // appBar: AppBar(
+        //   title: Text('file page'),
+        // ),
+        backgroundColor: Color.fromARGB(255, 29, 29, 29),
         body: Center(
           child: Container(
             width: screenwidth * 0.6,
@@ -25,13 +26,47 @@ class FilePage extends StatelessWidget {
             decoration: BoxDecoration(
               color: secondaryColor,
             ),
-            child: TextField(
-              decoration: InputDecoration(
-                border: OutlineInputBorder(),
-                hintText: 'Enter a search term',
-              ),
+            padding: EdgeInsets.only(left: 40, right: 40, top: 60),
+            child: Column(
+              children: [
+                TextField(
+                  decoration: InputDecoration(
+                    border: OutlineInputBorder(),
+                    hintText: 'Enter a search term',
+                  ),
+                ),
+                SizedBox(
+                  height: 30,
+                ),
+                TextField(
+                  decoration: InputDecoration(
+                    border: OutlineInputBorder(),
+                    hintText: 'Enter a search term',
+                  ),
+                ),
+                SizedBox(
+                  height: 30,
+                ),
+                TextField(
+                  decoration: InputDecoration(
+                    border: OutlineInputBorder(),
+                    hintText: 'Enter a search term',
+                  ),
+                ),
+                SizedBox(
+                  height: 30,
+                ),
+                FlatButton(
+                  textColor: Color.fromARGB(255, 194, 133, 42), // foreground
+                  onPressed: () {},
+
+                  child: Text(
+                    'Change Password',
+                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                  ),
+                )
+              ],
             ),
-            //  child:Text ('subscription'),
           ),
         ),
       ),

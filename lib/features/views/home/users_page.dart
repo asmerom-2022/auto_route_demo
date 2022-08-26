@@ -16,9 +16,10 @@ class UsersPage extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         //drawer: NavDrawer(),
-        appBar: AppBar(
-          title: Text('users page'),
-        ),
+        // appBar: AppBar(
+        //   title: Text('users page'),
+        // ),
+        backgroundColor: Color.fromARGB(255, 29, 29, 29),
         body: Center(
           child: Container(
             width: screenwidth * 0.6,
